@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fcfcf2;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #000000;
+        }
+        form {
+            background-color: #fbeeff;
+            max-width: 420px;
+            margin: 40px auto 40px auto;
+            padding: 32px 36px 28px 36px;
+            border-radius: 12px;
+            box-shadow: 0 0 16px rgba(44,62,80,0.12);
+            border: 2px solid #000000;
+        }
+        label, p, h2 {
+            color: #000000;
+            font-size: 1rem;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 12px 14px;
+            margin-top: 8px;
+            margin-bottom: 22px;
+            border: 1.5px solid #000000;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #ffffff;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        input[type="radio"] {
+            margin-right: 7px;
+            margin-left: 2px;
+        }
+        input[type="button"] {
+            background-color: #2980b9;
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-right: 12px;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+        input[type="button"]:hover {
+            background-color: #1abc9c;
+        }
+        input[type="reset"] {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 8px;
+            transition: background 0.2s;
+        }
+        input[type="reset"]:hover {
+            background-color: #c0392b;
+        }
+        h2 {
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Feedback Form</h1>
+        <form action = '/actin page.php' method = 'post'>
+            <label for="sname" style="font-weight: bold;">Name:</label><br>
+            <input type="text" id="sname" name="sname" placeholder="Enter your Name" required><br><br>
+            
+            <label for="email" style="font-weight: bold;">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required><br><br>
+            
+            <h2>Feedback Message </h2>
+            <p>Text your feedback in the below box.</p>
+            <textarea name="message" rows="10" cols="30" placeholder="Text here." required></textarea>
+  <br><br>
+            <p style="font-weight: bold;">How Satisfied are you?</p>
+            <input type="radio" id="satisfied" name="How Satisfied are you?" value="SATISFIED">
+            <label for="satisfied">SATISFIED</label><br>
+            <input type="radio" id="neutral" name="How Satisfied are you?" value="NEUTRAL">
+            <label for="neutral">NEUTRAL</label><br>
+            <input type="radio" id="unsatisfied" name="How Satisfied are you?" value="UNSATISFIED">
+            <label for="unsatisfied">UNSATISFIED</label><br><br>
+            
+            <input type="button" value="Submit" onclick="alert('Registration Successful!')">
+            <input type="reset" value="Reset">
+        </form> 
+</body>
+</html>
