@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Feedback Form</title>
+<style>
+    body {
+      font-family: sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background-color: rgb(214, 235, 150);
+      padding: 50px 30px;
+      border-radius: 5px;
+      width: 500px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: 600;
+      color: #555;
+    }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    textarea {
+      min-height: 80px;
+    }
+    .radio-group {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-top: 5px;
+      margin-bottom: 18px;
+    }
+    .radio-group label {
+      font-weight: normal;
+    }
+    button {
+      width: 100%;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<form action="action_page.php" method="post">
+    <h1>Feedback Form</h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="feedbackform">Feedback:</label>
+    <textarea id="feedbackform" name="feedbackform" rows="3" cols="30" required></textarea>
+    <label for="rating">How satisfied are you?</label>
+    <div class="radio-group">
+        <input type="radio" id="satisfied" name="rating" value="Satisfied">
+        <label for="satisfied">Satisfied</label>
+        <input type="radio" id="neutral" name="rating" value="Neutral">
+        <label for="neutral">Neutral</label>
+        <input type="radio" id="dissatisfied" name="rating" value="Dissatisfied">
+        <label for="dissatisfied">Dissatisfied</label>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
